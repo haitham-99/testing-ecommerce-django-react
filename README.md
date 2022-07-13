@@ -40,3 +40,4 @@ A completely customized eCommerce / shopping cart application using Django, REAC
 - Mark orders as a delivered option
 - Checkout process (shipping, payment method, etc)
 - PayPal / credit card integration
+h
