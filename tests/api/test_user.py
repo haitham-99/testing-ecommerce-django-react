@@ -51,4 +51,4 @@ def test_register_user():
 
     data = response.data
 
-    assert data["name"] == payload["name"]
+    assert data["name"] == payload["namee"]
