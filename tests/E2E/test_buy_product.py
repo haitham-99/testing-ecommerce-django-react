@@ -1,6 +1,6 @@
 import time
 from selenium.webdriver.common.by import By
-
+import random
 '''
 # buy product scenario - 
 1- you need to register to the website
@@ -10,12 +10,13 @@ from selenium.webdriver.common.by import By
 '''
 
 
-def test_register_new_account(driver):
+def test_buy_product_scenario(driver):
+    sNum = random.randint(2, 100)
     driver.get("http://127.0.0.1:8000/#/")
     driver.find_element(By.CSS_SELECTOR, "a.nav-link:nth-child(2)").click()
     driver.find_element(By.CSS_SELECTOR, "div.py-3:nth-child(3) > div:nth-child(1) > a:nth-child(1)").click()
     driver.find_element(By.CSS_SELECTOR, "#name").send_keys("test13")
-    driver.find_element(By.CSS_SELECTOR, "#email").send_keys("test13@test.com")
+    driver.find_element(By.CSS_SELECTOR, "#email").send_keys("test"+str(sNum)+"@test.com")
     driver.find_element(By.CSS_SELECTOR, "#password").send_keys("t1234567")
     driver.find_element(By.CSS_SELECTOR, "#passwordConfirm").send_keys("t1234567")
     driver.find_element(By.CSS_SELECTOR, ".mt-3").click()

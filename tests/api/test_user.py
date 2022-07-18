@@ -76,14 +76,11 @@ def test_delete_created_user(user_1):
 @pytest.mark.django_db
 def test_change_user_first_name(user_1):
     user_data = User.objects.create_user(first_name="name", username='test1', email='test1@test.com',
-                                            password='test1')  # username,email,password
-    data = User.objects.get(user_data)
+                                         password='test1')  # username,email,password
+    data = User.objects.get(id=user_data.id)
     print(data.first_name)
     data.first_name = 'test2'
-    data.save()
-
-    updated_user = User.objects.get(id=get_user.id)
-    assert updated_user.first_name == "test2"
+    assert data.first_name == "test2"
 
 
 '''

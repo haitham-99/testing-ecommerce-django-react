@@ -41,7 +41,7 @@ def test_delete_product(create_product):
 @pytest.mark.django_db
 def test_api_product_creation():
     client = APIClient()
-    user = User.objects.create_user(username='testuser', password='134')
+    user = User.objects.create_superuser(username='testuser', password='134')
     client.force_authenticate(user)
     response = client.post("/api/products/create/")
     assert response.status_code == 200
