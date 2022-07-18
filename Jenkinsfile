@@ -29,17 +29,18 @@ pipeline {
         stage('Running pytest tests') {
             steps {
                 bat '''call ./venv/Scripts/activate
-                       pytest '''
+                       pytest
+                       pytest --html=report.html --self-contained-html --alluredir=allure-results '''
             }
         }
-        // stage('Deploying to Docker') {
-        //     steps {
-        //         bat '''
-        //         docker image build -t ecommerce-project .
-        //         docker run  --name=flask-project -p 8000:8000 -d ecommerce-project
-        //         '''
-        //     }
-        // }
+        stage('Deploying to Docker') {
+            steps {
+                bat '''
+                docker image build -t ecommerce-project .
+                docker run  --name=flask-project -p 7000:7000 -d ecommerce-project
+                '''
+            }
+        }
 
 
     }
@@ -48,6 +49,11 @@ pipeline {
     post {
       failure {
                   bat '''curl -D- -u haithamodehodeh@gmail.com:RRwPUHY7qXkiv4RrwvhZ94CC -X POST --data "@C:\\Users\\haith\\Desktop\\add.txt" -H "Content-Type:application/json" https://testecom.atlassian.net/rest/api/2/issue/'''
+
+    }
+    always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: ''])
+            allure includeProperties: true, jdk: '', results: [[path: 'allure-results']]
 
     }
 
