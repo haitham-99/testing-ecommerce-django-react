@@ -7,7 +7,7 @@ def test_new_order_create(create_order):
     assert count == 1
 
 
-def test_porder_creation(create_order):
+def test_product_order_creation(create_order):
     assert isinstance(create_order, Order) is True
 
 

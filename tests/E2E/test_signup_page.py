@@ -6,7 +6,7 @@ import random
 '''
 
 
-def test_register_new_account(driver):
+def test_register_new_account_with_random_emails(driver):
     sNum = random.randint(2, 100)
     driver.get("http://127.0.0.1:8000/#/")
     driver.find_element(By.CSS_SELECTOR, "a.nav-link:nth-child(2)").click()
@@ -17,7 +17,8 @@ def test_register_new_account(driver):
     driver.find_element(By.CSS_SELECTOR, "#passwordConfirm").send_keys("t1234567")
     driver.find_element(By.CSS_SELECTOR, ".mt-3").click()
     time.sleep(1)
-    assert "Latest Products" in driver.page_source
+    user_nav_bar = driver.find_element(By.CSS_SELECTOR,"#username").text
+    assert "test12" in user_nav_bar.lower()
 
 
 '''
