@@ -11,7 +11,7 @@ from rest_framework.test import APIClient
 '''
 ## Api test - Integration Testing - testing if Api can create a user successfully 
 '''
-
+client = APIClient()
 
 @pytest.mark.django_db
 def test_api_user_creation():
