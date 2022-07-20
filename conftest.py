@@ -12,7 +12,7 @@ def driver():
     firefox_driver_binary = "./drivers/geckodriver"
     ser_firefox = FirefoxService(firefox_driver_binary)
     firefox_options = FireFoxOptions()
-    # firefox_options.add_argument("--headless")
+    firefox_options.add_argument("--headless")
     browser_name = 'firefox'
     if browser_name == "firefox-webdriver":
         driver = webdriver.Firefox(service=ser_firefox)
