@@ -24,7 +24,7 @@ def driver():
         }
         driver = webdriver.Remote("http://localhost:4444", desired_capabilities=dc, options=firefox_options)
     yield driver
-    # driver.close()
+    driver.close()
 
 
 @pytest.fixture()
