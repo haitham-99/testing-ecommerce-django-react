@@ -2,8 +2,8 @@
 # from selenium.webdriver.common.by import By
 # import random
 
-def test_fail():
-    assert 1 == 2
+# def test_fail():
+#     assert 1 == 2
 
 # def test_buy_product_scenario(driver):
 #     sNum = random.randint(2, 100)
