@@ -1,28 +1,57 @@
 <h1 align=center>E-Commerce Website with Django + React & Redux</h1>
-<h2 align=center>Otaku House - Anime Merchandise and Cosplay Shop</h2>
+<h2 align=center>Champions Pc - computers hardware Shop</h2>
+The final project for BEYOND DEV which I intend in a QA Automation Development Bootcamp,
 
-## ✨ [Live Link - Otaku House](https://otakuhouse.herokuapp.com/)
-
-### How to Run 🏃‍♀️
+### How to Run website
 
 ```shell
 1 Clone This Repo
 2 cd backend
-3 python -m venv env
-4 .\env\Scripts\activate
+3 python -m venv venv
+4 .\venv\Scripts\activate
 5 pip install -r requirements.txt 
 6 python manage.py runserver
 
 ```
+### How to Run Tests
 
+```shell
+1 Clone This Repo
+3 python -m venv venv
+4 .\venv\Scripts\activate
+5 pip install -r requirements.txt 
+6 python manage.py runserver
+7 download Firefox web driver from [selenium webdrivers](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/) and add it to the project folder
+8 download selenium grid from [Selenium grid](https://www.selenium.dev/downloads/) and add the file to the project folder
+9 java -jar .\selenium-server-4.3.0.jar standalone
+10 pytest 
+
+```
+
+### Tests
+```
+1 Unit tests
+2 Integration tests
+3 E2E tests (using selenium)
+4 STP AND STD attached
+```
+
+### Tools
+```
+1 Selenium
+2 Jenkins
+3 Docker
+4 NGROK
+5 Jira
+```
 ### 📷 Project Screenshots
 
-![ss](./ss/ss1.png)
-![ss](./ss/ss2.png)
-![ss](./ss/ss3.png)
-![ss](./ss/ss4.png)
-![ss](./ss/ss5.png)
-![ss](./ss/ss6.png)
+![ScreenShots](./ScreenShots/homepage.png)
+![ScreenShots](./ScreenShots/pytest.png)
+![ScreenShots](./ScreenShots/jenkins.png)
+![ScreenShots](./ScreenShots/allurereport.png)
+![ScreenShots](./ScreenShots/Docker.png)
+![ScreenShots](./ScreenShots/jira.png)
 
 ### 🚀 Project Features
 
