@@ -13,7 +13,7 @@ def driver():
     firefox_driver_binary = "geckodriver.exe"
     ser_firefox = FirefoxService(firefox_driver_binary)
     firefox_options = FireFoxOptions()
-    firefox_options.add_argument("--headless")
+#     firefox_options.add_argument("--headless")
     browser_name = 'firefox'
     if browser_name == "firefox-webdriver":
         driver = webdriver.Firefox(service=ser_firefox)
@@ -24,7 +24,6 @@ def driver():
             "platformName": "Windows 11"
         }
         driver = webdriver.Remote("http://localhost:4444", desired_capabilities=dc, options=firefox_options)
-    warnings.filterwarnings("ignore")
     yield driver
     driver.close()
 
