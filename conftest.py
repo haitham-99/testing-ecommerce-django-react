@@ -5,11 +5,12 @@ from base.models import Product, Order, OrderItem, ShippingAddress, Review
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FireFoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
+import warnings
 
 
 @pytest.fixture()
 def driver():
-    firefox_driver_binary = "./drivers/geckodriver"
+    firefox_driver_binary = "geckodriver.exe"
     ser_firefox = FirefoxService(firefox_driver_binary)
     firefox_options = FireFoxOptions()
     firefox_options.add_argument("--headless")
@@ -20,9 +21,10 @@ def driver():
 
         dc = {
             "browserName": "firefox",
-            "platformName": ""
+            "platformName": "Windows 11"
         }
         driver = webdriver.Remote("http://localhost:4444", desired_capabilities=dc, options=firefox_options)
+    warnings.filterwarnings("ignore")
     yield driver
     driver.close()
 

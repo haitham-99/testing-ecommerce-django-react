@@ -11,9 +11,6 @@ import random
 '''
 
 
-# def test_fail():
-#     assert 1 == 2
-
 def test_buy_product_scenario(driver):
     sNum = random.randint(2, 100)
     driver.get("http://127.0.0.1:8000/#/")
