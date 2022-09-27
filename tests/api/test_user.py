@@ -13,6 +13,7 @@ from rest_framework.test import APIClient
 '''
 client = APIClient()
 
+
 @pytest.mark.django_db
 def test_api_user_creation():
     payload = dict(name='test_user1@test.com', email='test_user1@test.com', password='t1234567')

@@ -2,3 +2,4 @@ venv
 jenkins.war
 selenium-server-4.3.0.jar
 geckodriver.exe
+chromedriver.exe

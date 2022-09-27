@@ -14,6 +14,7 @@ import random
 def test_buy_product_scenario(driver):
     sNum = random.randint(2, 100)
     driver.get("http://127.0.0.1:8000/#/")
+    time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.nav-link:nth-child(2)").click()
     driver.find_element(By.CSS_SELECTOR, "div.py-3:nth-child(3) > div:nth-child(1) > a:nth-child(1)").click()
     driver.find_element(By.CSS_SELECTOR, "#name").send_keys("test13")

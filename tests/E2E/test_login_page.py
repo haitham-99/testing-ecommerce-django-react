@@ -32,4 +32,3 @@ def test_log_in_by_input_wrong_password(driver):
     text = driver.find_element(By.CSS_SELECTOR, "#root > div > main > div > div > div > "
                                                 "div.fade.alert.alert-danger.show").text
     assert text == "No active account found with the given credentials"
-

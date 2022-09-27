@@ -1,4 +1,4 @@
-import pytest
+
 from base.models import Product, Order, ShippingAddress, OrderItem
 
 
