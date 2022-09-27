@@ -24,6 +24,7 @@ def driver():
             "platformName": "Windows 11"
         }
         driver = webdriver.Remote("http://10.0.0.6:4444", desired_capabilities=dc, options=firefox_options)
+
     yield driver
     driver.close()
 
