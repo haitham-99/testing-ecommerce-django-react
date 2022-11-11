@@ -12,7 +12,7 @@ import random
 
 
 def test_buy_product_scenario(driver):
-    sNum = random.randint(2, 100)
+    sNum = random.randint(13, 100)
     driver.get("http://127.0.0.1:8000/#/")
     time.sleep(2)
     driver.find_element(By.CSS_SELECTOR, "a.nav-link:nth-child(2)").click()
