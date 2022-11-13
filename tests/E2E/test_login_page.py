@@ -12,7 +12,7 @@ def test_log_in(driver):
     driver.find_element(By.CSS_SELECTOR, "#email").send_keys("test11@test.com")
     driver.find_element(By.CSS_SELECTOR, "#password").send_keys("t1234567")
     driver.find_element(By.CSS_SELECTOR, ".mt-3").click()
-    time.sleep(3)
+    time.sleep(1)
     user_nav_bar = driver.find_element(By.CSS_SELECTOR, "#username").text
     assert "testing123" in user_nav_bar.lower()
 
